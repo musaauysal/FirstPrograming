@@ -1,8 +1,7 @@
-# schoolproject
-Okul Projesi
-
 #include <stdio.h> 
 #include <conio.h> 
+
+// İki sayidan ekrana hangisinin büyük olduğunu yazdıran program.
 main() 
 { 
 int sayi1,sayi2; 
