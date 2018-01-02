@@ -1,0 +1,49 @@
+#include <stdio.h>
+#include <conio.h>
+#include <string.h>
+#include <locale.h>
+#include <time.h>
+#include <stdlib.h>
+main()
+{
+	setlocale(LC_ALL,"Turkish");
+	char cumle [200];
+	printf("Cümle giriniz : ");
+	gets(cumle);
+	int uzunluk=0;
+	int enuzun=0;
+	int sayac=0;
+	int sayac2=0;
+	int bindis=0;
+	int sindis=0;
+	for(int i=0;i<strlen(cumle);i++)
+	{
+		printf("%c",cumle[i]);
+		sayac++;
+		sayac2++;
+		uzunluk=sayac;
+		if(cumle[i]==' ')
+		{
+			uzunluk-=1;
+			printf("\n");
+			sayac=0;
+		}
+		if(enuzun<uzunluk)
+		{
+		//	bindis=sayac2-enuzun-1;
+		bindis=sayac2;
+			enuzun=uzunluk;
+			sindis=bindis+enuzun;
+		}	
+	}
+	printf("\nEn uzun kelime %d harften oluşur",enuzun);
+	printf("\n");
+	
+	for(int i=bindis;i<sindis;i++)
+	{
+		printf("%c",cumle[i]);
+	}
+	
+	getch();
+	
+}
